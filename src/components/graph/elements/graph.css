@@ -1,0 +1,22 @@
+
+.Graph {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    background: #363D45;
+    height: 60px;
+    color:white;
+    
+
+    box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.12);
+
+
+    flex: none;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.Text {
+    color: white;
+}
