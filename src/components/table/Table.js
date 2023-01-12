@@ -20,7 +20,6 @@ export default function BasicTable() {
     }
     useEffect(() => {
         getUnderflow();
-        console.log(Underflow)
         }, []);
     
 
@@ -84,32 +83,32 @@ export default function BasicTable() {
 
   return (
     <div className="Table">
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} style={{backgroundColor: '#3A3B3B', width: '100%', height: 'auto'}}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
             <TableRow className="TableRowBody0">
-                <TableCell><point style={{color: 'red'}}>•</point> Underflow Percent Solids</TableCell>
-                <TableCell align="right">{Underflow}</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}}><point style={{color: 'red'}}>•</point> Underflow Percent Solids</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}} align="right">{Underflow}</TableCell>
             </TableRow>
             <TableRow className="TableRowBody0">
-                <TableCell className="Text" ><point style={{color: 'yellow'}}>•</point> Bed Pressure</TableCell>
-                <TableCell align="right">{BedPressure}</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}}><point style={{color: 'yellow'}}>•</point> Bed Pressure</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}} align="right">{BedPressure}</TableCell>
             </TableRow>
             <TableRow className="TableRowBody0">
-                <TableCell><point style={{color: 'purple'}}>•</point> Underflow Flow Rate</TableCell>
-                <TableCell align="right">{UnderflowFlow}</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}}><point style={{color: 'purple'}}>•</point> Underflow Flow Rate</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}} align="right">{UnderflowFlow}</TableCell>
             </TableRow>
             <TableRow className="TableRowBody0"> 
-                <TableCell><point style={{color: 'orange'}}>•</point> Flocculant Flow Rate</TableCell>
-                <TableCell align="right">{FlocculantFlow}</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}}><point style={{color: 'orange'}}>•</point> Flocculant Flow Rate</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}} align="right">{FlocculantFlow}</TableCell>
             </TableRow>
             <TableRow className="TableRowBody0">
-                <TableCell><point style={{color: 'green'}}>•</point> Feed Flow Rate</TableCell>
-                <TableCell align="right">{FeedFlow}</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}}><point style={{color: 'green'}}>•</point> Feed Flow Rate</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}} align="right">{FeedFlow}</TableCell>
             </TableRow>
             <TableRow className="TableRowBody0">
-                <TableCell><point style={{color: 'blue'}}>•</point> Feed Percent Solids</TableCell>
-                <TableCell align="right">{FeedPercent}</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}}><point style={{color: 'blue'}}>•</point> Feed Percent Solids</TableCell>
+                <TableCell style={{color: 'white', fontSize: 20}} align="right">{FeedPercent}</TableCell>
             </TableRow>
             </TableHead>
         </Table>
