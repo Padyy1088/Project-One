@@ -1,0 +1,50 @@
+import React, { useState, useEffect } from "react";
+import axios from 'axios';
+import value from "./identifier";
+
+
+
+const url = "https://pokeapi.co/api/v2/pokemon/?offset=0&limit=151"
+
+const Name = () => {
+
+    const[bulbasaur,setBulbasaur] = useState([])
+
+    
+    const getBulbasaurInfo = async () => {
+    const {data} =  await axios.get(url)
+    const results = data.results
+    console.log(results)
+    setBulbasaur(results[value].name)
+    console.log(results[value].url)
+    }
+    
+    useEffect(() => {
+        getBulbasaurInfo();
+        }, []);
+
+    return (    
+        <>
+        <div>
+            <h1><u>Pokemon API</u></h1>
+            <h1>{bulbasaur}</h1>
+        </div>
+        </>
+    )
+}
+
+export default Name
+
+==========================================================================
+const[Underflow,setUnderflow] = useState([])
+
+    
+    const getUnderflow = async () => {
+    const {data} =  await axios.get(url)
+    const results = data.current.data.TK1.TK1_Underflow_Percent_Solids
+    setUnderflow(data.current.data.TK1.TK1_Underflow_Percent_Solids[0])
+    }
+    
+    useEffect(() => {
+        getUnderflow();
+        }, []);

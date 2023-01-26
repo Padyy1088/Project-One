@@ -1,4 +1,15 @@
-.App {
+.canvas {
+  margin: 0;
+  background-color: #3A3B3B;
+}
+
+.header {
+  color:grey;
   text-align: center;
-  background-color: #121417;
+  font-size: 50px;
+}
+
+.about {
+  text-align: center;
+  font-size: 12px;
 }

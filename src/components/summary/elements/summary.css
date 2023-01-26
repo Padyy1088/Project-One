@@ -1,15 +1,8 @@
 .rowC{
     padding-top: 150px;
     display:flex; 
-    max-height: 506px;
     flex-direction:row; 
     background-color: '#3A3B3B';
     background:#3A3B3B;
+    
   }
-
-.label{
-    padding-left: 0px;
-    font-size: 17px;
-}
-
-

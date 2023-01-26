@@ -1,0 +1,20 @@
+.backing {
+  background-color: '#3A3B3B';
+  background:#3A3B3B;
+  padding-left: 1px;
+}
+.Heading {
+  color:grey
+}
+.Panel {
+  color:grey
+}
+.rowC{
+  padding-top: 120px;
+  display:flex; 
+  height: 100%;
+  flex-direction:row; 
+  background-color: '#3A3B3B';
+  background:#3A3B3B;
+  padding-left: 100px;
+}
