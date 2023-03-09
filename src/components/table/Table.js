@@ -15,39 +15,34 @@ export default function BasicTable() {
     const[Underflow,setUnderflow] = useState([])
     const getUnderflow = async () => {
     const {data} =  await axios.get(url)
-    const results = data.current.data.TK1.TK1_Underflow_Percent_Solids
     setUnderflow(data.current.data.TK1.TK1_Underflow_Percent_Solids.values[0])
     }
     const[BedPressure,setBedPressure] = useState([])
     const getBedPressure = async () => {
     const {data} =  await axios.get(url)
-    const results = data.current.data.TK1.TK1_Bed_Pressure
     setBedPressure(data.current.data.TK1.TK1_Bed_Pressure.values[0])
     } 
     const[FlocculantFlow,setFlocculantFlow] = useState([])
     const getFlocculantFlow = async () => {
     const {data} =  await axios.get(url)
-    const results = data.current.data.TK1.TK1_Flocculant_Flow_Rate
     setFlocculantFlow(data.current.data.TK1.TK1_Flocculant_Flow_Rate.values[0])
     }      
     const[UnderflowFlow,setUnderflowFlow] = useState([])
     const getUnderflowFlow = async () => {
     const {data} =  await axios.get(url)
-    const results = data.current.data.TK1.TK1_Underflow_Flow_Rate
     setUnderflowFlow(data.current.data.TK1.TK1_Underflow_Flow_Rate.values[0])
     }        
     const[FeedFlow,setFeedFlow] = useState([])
     const getFeedFlow = async () => {
     const {data} =  await axios.get(url)
-    const results = data.current.data.TK1.TK1_Feed_Flow_Rate
     setFeedFlow(data.current.data.TK1.TK1_Feed_Flow_Rate.values[0])
     }        
     const[FeedPercent,setFeedPercent] = useState([])
     const getFeedPercent = async () => {
     const {data} =  await axios.get(url)
-    const results = data.current.data.TK1.TK1_Feed_Percent_Solids
     setFeedPercent(data.current.data.TK1.TK1_Feed_Percent_Solids.values[0])
-    }        
+    }  
+    
     useEffect(() => {
         getFeedFlow();
         getFeedPercent();
@@ -66,18 +61,18 @@ export default function BasicTable() {
             </b>
         </label>
         <br />
-        <space style={{color: "#3A3B3B"}}>
+        <span style={{color: "#3A3B3B"}}>
             .
-        </space>
+        </span>
         <Box>
         <TableContainer component={Paper}  style={{backgroundColor: '#3A3B3B', width: 'auto', height: 'auto'}}>
         <Table sx={{ minWidth: 525 }} aria-label="simple table">
             <TableHead>
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'grey', fontSize: 20}}>
-                    <point style={{color: 'red'}}>
+                    <span style={{color: 'red'}}>
                         •
-                    </point>
+                    </span>
                     <b>
                          Underflow Percent Solids
                     </b> 
@@ -90,9 +85,9 @@ export default function BasicTable() {
             </TableRow>
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'grey', fontSize: 20}}>
-                    <point style={{color: 'yellow'}}>
+                    <span style={{color: 'yellow'}}>
                         •
-                    </point>
+                    </span>
                     <b>
                          Bed Pressure
                     </b>
@@ -105,9 +100,9 @@ export default function BasicTable() {
             </TableRow>
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'grey', fontSize: 20}}>
-                    <point style={{color: 'purple'}}>
+                    <span style={{color: 'purple'}}>
                         •
-                    </point>
+                    </span>
                     <b>
                          Underflow Flow Rate
                     </b>
@@ -120,9 +115,9 @@ export default function BasicTable() {
             </TableRow>
             <TableRow className="TableRowBody0"> 
                 <TableCell style={{color: 'grey', fontSize: 20}}>
-                    <point style={{color: 'orange'}}>
+                    <span style={{color: 'orange'}}>
                         •
-                    </point>
+                    </span>
                     <b>
                          Flocculant Flow Rate
                     </b>
@@ -135,9 +130,9 @@ export default function BasicTable() {
             </TableRow>
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'grey', fontSize: 20}}>
-                    <point style={{color: 'green'}}>
+                    <span style={{color: 'green'}}>
                         •
-                    </point>
+                    </span>
                     <b>
                          Feed Flow Rate
                     </b>
@@ -150,9 +145,9 @@ export default function BasicTable() {
             </TableRow>
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'grey', fontSize: 20}}>
-                    <point style={{color: 'blue'}}>
+                    <span style={{color: 'blue'}}>
                         •
-                    </point>
+                    </span>
                     <b>
                          Feed Percent Solids
                     </b>

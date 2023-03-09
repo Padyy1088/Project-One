@@ -10,7 +10,6 @@ import {
     YAxis,
     CartesianGrid
 } from 'recharts';
-import { Container } from '@mui/material';
   
 const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
 
@@ -31,13 +30,13 @@ function FeedFlowGraph() {
 
     
     const pdata =[
-        {place:0,time: "0min", FeedFlow: FeedFlow[0]},
-        {place:0,time: "5min", FeedFlow: FeedFlow[1]},
-        {place:0,time: "15min",  FeedFlow: FeedFlow[2]},
-        {place:0,time: "25min",  FeedFlow: FeedFlow[3]},
-        {place:0,time: "35min",  FeedFlow: FeedFlow[4]},
-        {place:0,time: "45min", FeedFlow: FeedFlow[5]},
-        {place:48,time: "55min", FeedFlow: FeedFlow[6]}];
+        {time: "0 mins ago", FeedFlow: FeedFlow[0]},
+        {time: "5 mins ago", FeedFlow: FeedFlow[1]},
+        {time: "15 mins ago",  FeedFlow: FeedFlow[2]},
+        {time: "25 mins ago",  FeedFlow: FeedFlow[3]},
+        {time: "35 mins ago",  FeedFlow: FeedFlow[4]},
+        {time: "45 mins ago", FeedFlow: FeedFlow[5]},
+        {time: "55 mins ago", FeedFlow: FeedFlow[6]}];
             
     
     return (
@@ -48,7 +47,7 @@ function FeedFlowGraph() {
             <LineChart width={1125} height={500} data={pdata} margin={{ top: 10, right: 20, bottom: 130, left:-30}}>
             <CartesianGrid strokeDasharray="0.1 1" />
             <XAxis dataKey="time"/>
-            <YAxis type="number" domain={[47, 47.20]}/>
+            <YAxis type="FeedFlow"/>
             <Tooltip/>
               <Line type="monotone" dataKey="FeedFlow" strokeWidth={5} stroke="green" activeDot={{r: 8}}/>
             </LineChart>

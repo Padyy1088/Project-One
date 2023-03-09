@@ -10,7 +10,6 @@ import {
     YAxis,
     CartesianGrid
 } from 'recharts';
-import { Container } from '@mui/material';
   
 const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
 
@@ -31,13 +30,13 @@ function FlocculantFlowGraph() {
 
     
     const pdata =[
-        {place:0,time: "0min",  FlocculantFlow: FlocculantFlow[0]},
-        {place:0,time: "5min",  FlocculantFlow: FlocculantFlow[1]},
-        {place:0,time: "15min",  FlocculantFlow: FlocculantFlow[2]},
-        {place:0,time: "25min",  FlocculantFlow: FlocculantFlow[3]},
-        {place:0,time: "35min",  FlocculantFlow: FlocculantFlow[4]},
-        {place:0,time: "45min",  FlocculantFlow: FlocculantFlow[5]},
-        {place:3,time: "55min", FlocculantFlow: FlocculantFlow[6]}];
+        {time: "0 mins ago",  FlocculantFlow: FlocculantFlow[0]},
+        {time: "5 mins ago",  FlocculantFlow: FlocculantFlow[1]},
+        {time: "15 mins ago",  FlocculantFlow: FlocculantFlow[2]},
+        {time: "25 mins ago",  FlocculantFlow: FlocculantFlow[3]},
+        {time: "35 mins ago",  FlocculantFlow: FlocculantFlow[4]},
+        {time: "45 mins ago",  FlocculantFlow: FlocculantFlow[5]},
+        {time: "55 mins ago", FlocculantFlow: FlocculantFlow[6]}];
             
     
     return (

@@ -1,0 +1,420 @@
+{
+    "current": {
+        "data": {
+            "TK1": {
+                "status": 500,
+                "message": "Optimisation request failed"
+            },
+            "HDT1": {
+                "status": 500,
+                "message": "Optimisation request failed"
+            }
+        },
+        "metadata": {
+            "interval": 300000,
+            "time": "2023-03-02T09:24:13.519Z",
+            "TK1": {
+                "time": "2023-03-02T09:24:13.519Z",
+                "asset": "TK1",
+                "company": "referencia",
+                "task": "optimize",
+                "version": "v1",
+                "opt_details": true,
+                "partial_rewards": true
+            },
+            "HDT1": {
+                "time": "2023-03-02T09:24:13.519Z",
+                "asset": "HDT1",
+                "company": "referencia",
+                "task": "optimize",
+                "version": "v1",
+                "opt_details": true,
+                "partial_rewards": true,
+                "optiConfig": {
+                    "rewards": {
+                        "Flocculant Dilution Ratio | Setpoint": {
+                            "function": "RatioReward",
+                            "setpoint": 8,
+                            "weight": 0,
+                            "width": 1
+                        },
+                        "Flocculant Dosage | Setpoint": {
+                            "function": "DosageReward",
+                            "setpoint": 12,
+                            "weight": 0
+                        },
+                        "Underflow Percent Solids | Max Mean": {
+                            "function": "MeanReward",
+                            "field": "Underflow Percent Solids",
+                            "maximize": true,
+                            "weight": 1,
+                            "power": 1
+                        },
+                        "Underflow Percent Solids | Regressed Variance": {
+                            "function": "RegressedVarianceReward",
+                            "field": "Underflow Percent Solids",
+                            "weight": 100
+                        },
+                        "Clear Water Height | Max Mean": {
+                            "function": "MeanReward",
+                            "field": "Clear Water Height",
+                            "maximize": true,
+                            "weight": 0.5,
+                            "power": 0.8
+                        },
+                        "Flocculant Flow Rate | Min Mean": {
+                            "function": "MeanReward",
+                            "field": "Flocculant Flow Rate",
+                            "maximize": false,
+                            "weight": 0,
+                            "power": 1
+                        },
+                        "Rake Torque | Band Reward": {
+                            "function": "BellBandReward",
+                            "field": "Rake Torque",
+                            "maximum": 30,
+                            "minimum": 28,
+                            "weight": 0,
+                            "width": 5
+                        },
+                        "Bed Pressure | Band Reward": {
+                            "function": "BellBandReward",
+                            "field": "Bed Pressure",
+                            "maximum": 132,
+                            "minimum": 128,
+                            "weight": 0,
+                            "width": 5
+                        },
+                        "Clear Water Height | Band Reward": {
+                            "function": "BellBandReward",
+                            "field": "Clear Water Height",
+                            "maximum": 4,
+                            "minimum": 3.5,
+                            "weight": 0,
+                            "width": 1
+                        },
+                        "Underflow Percent Solids | Band Reward": {
+                            "function": "BellBandReward",
+                            "field": "Underflow Percent Solids",
+                            "maximum": 67,
+                            "minimum": 64,
+                            "weight": 0,
+                            "width": 4
+                        },
+                        "Underflow Percent Solids | Min Variance": {
+                            "function": "VarianceReward",
+                            "field": "Underflow Percent Solids",
+                            "maximize": false,
+                            "weight": 0
+                        },
+                        "Underflow Flow Rate | Control Power Min Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Underflow Flow Rate",
+                            "weight": 0,
+                            "softLimit": 800,
+                            "hardLimit": 600,
+                            "power": 2
+                        },
+                        "Underflow Flow Rate | Control Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Underflow Flow Rate",
+                            "weight": 0,
+                            "softLimit": 1500,
+                            "hardLimit": 1700,
+                            "power": 2
+                        },
+                        "Flocculant Flow Rate | Control Power Min Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Flocculant Flow Rate",
+                            "weight": 0,
+                            "softLimit": 4,
+                            "hardLimit": 2,
+                            "power": 2
+                        },
+                        "Flocculant Flow Rate | Control Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Flocculant Flow Rate",
+                            "weight": 0,
+                            "softLimit": 10,
+                            "hardLimit": 12,
+                            "power": 2
+                        },
+                        "Mass Balance": {
+                            "function": "MassBalanceReward",
+                            "width": 200,
+                            "weight": 0
+                        },
+                        "Clear Water Height | Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Clear Water Height",
+                            "weight": 1,
+                            "softLimit": 3.3,
+                            "hardLimit": 3,
+                            "power": 2
+                        },
+                        "Bed Pressure | Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Bed Pressure",
+                            "weight": 1,
+                            "softLimit": 127,
+                            "hardLimit": 129,
+                            "power": 2
+                        },
+                        "Underflow Percent Solids | Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Underflow Percent Solids",
+                            "weight": 1,
+                            "softLimit": 70,
+                            "hardLimit": 71,
+                            "power": 2
+                        },
+                        "Rake Torque | Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Rake Torque",
+                            "weight": 1,
+                            "softLimit": 33,
+                            "hardLimit": 35,
+                            "power": 2
+                        }
+                    },
+                    "limits": {
+                        "Flocculant Dilution Flow Rate": {
+                            "max": 120,
+                            "min": 20,
+                            "points": 0,
+                            "change": 3
+                        },
+                        "Underflow Flow Rate": {
+                            "max": 1750,
+                            "min": 600,
+                            "points": 7,
+                            "change": 20
+                        },
+                        "Flocculant Dose": {
+                            "max": 20,
+                            "min": 8,
+                            "points": 7,
+                            "change": 0.5
+                        },
+                        "Flocculant Flow Rate": {
+                            "max": 12,
+                            "min": 2,
+                            "points": 0,
+                            "change": 0.3
+                        }
+                    }
+                }
+            }
+        },
+        "err": null
+    },
+    "previous": {
+        "data": {
+            "TK1": {
+                "status": 500,
+                "message": "Optimisation request failed"
+            },
+            "HDT1": {
+                "status": 500,
+                "message": "Optimisation request failed"
+            }
+        },
+        "metadata": {
+            "interval": 300000,
+            "time": "2023-03-02T09:19:13.516Z",
+            "TK1": {
+                "time": "2023-03-02T09:19:13.516Z",
+                "asset": "TK1",
+                "company": "referencia",
+                "task": "optimize",
+                "version": "v1",
+                "opt_details": true,
+                "partial_rewards": true
+            },
+            "HDT1": {
+                "time": "2023-03-02T09:19:13.516Z",
+                "asset": "HDT1",
+                "company": "referencia",
+                "task": "optimize",
+                "version": "v1",
+                "opt_details": true,
+                "partial_rewards": true,
+                "optiConfig": {
+                    "rewards": {
+                        "Flocculant Dilution Ratio | Setpoint": {
+                            "function": "RatioReward",
+                            "setpoint": 8,
+                            "weight": 0,
+                            "width": 1
+                        },
+                        "Flocculant Dosage | Setpoint": {
+                            "function": "DosageReward",
+                            "setpoint": 12,
+                            "weight": 0
+                        },
+                        "Underflow Percent Solids | Max Mean": {
+                            "function": "MeanReward",
+                            "field": "Underflow Percent Solids",
+                            "maximize": true,
+                            "weight": 1,
+                            "power": 1
+                        },
+                        "Underflow Percent Solids | Regressed Variance": {
+                            "function": "RegressedVarianceReward",
+                            "field": "Underflow Percent Solids",
+                            "weight": 100
+                        },
+                        "Clear Water Height | Max Mean": {
+                            "function": "MeanReward",
+                            "field": "Clear Water Height",
+                            "maximize": true,
+                            "weight": 0.5,
+                            "power": 0.8
+                        },
+                        "Flocculant Flow Rate | Min Mean": {
+                            "function": "MeanReward",
+                            "field": "Flocculant Flow Rate",
+                            "maximize": false,
+                            "weight": 0,
+                            "power": 1
+                        },
+                        "Rake Torque | Band Reward": {
+                            "function": "BellBandReward",
+                            "field": "Rake Torque",
+                            "maximum": 30,
+                            "minimum": 28,
+                            "weight": 0,
+                            "width": 5
+                        },
+                        "Bed Pressure | Band Reward": {
+                            "function": "BellBandReward",
+                            "field": "Bed Pressure",
+                            "maximum": 132,
+                            "minimum": 128,
+                            "weight": 0,
+                            "width": 5
+                        },
+                        "Clear Water Height | Band Reward": {
+                            "function": "BellBandReward",
+                            "field": "Clear Water Height",
+                            "maximum": 4,
+                            "minimum": 3.5,
+                            "weight": 0,
+                            "width": 1
+                        },
+                        "Underflow Percent Solids | Band Reward": {
+                            "function": "BellBandReward",
+                            "field": "Underflow Percent Solids",
+                            "maximum": 67,
+                            "minimum": 64,
+                            "weight": 0,
+                            "width": 4
+                        },
+                        "Underflow Percent Solids | Min Variance": {
+                            "function": "VarianceReward",
+                            "field": "Underflow Percent Solids",
+                            "maximize": false,
+                            "weight": 0
+                        },
+                        "Underflow Flow Rate | Control Power Min Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Underflow Flow Rate",
+                            "weight": 0,
+                            "softLimit": 800,
+                            "hardLimit": 600,
+                            "power": 2
+                        },
+                        "Underflow Flow Rate | Control Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Underflow Flow Rate",
+                            "weight": 0,
+                            "softLimit": 1500,
+                            "hardLimit": 1700,
+                            "power": 2
+                        },
+                        "Flocculant Flow Rate | Control Power Min Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Flocculant Flow Rate",
+                            "weight": 0,
+                            "softLimit": 4,
+                            "hardLimit": 2,
+                            "power": 2
+                        },
+                        "Flocculant Flow Rate | Control Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Flocculant Flow Rate",
+                            "weight": 0,
+                            "softLimit": 10,
+                            "hardLimit": 12,
+                            "power": 2
+                        },
+                        "Mass Balance": {
+                            "function": "MassBalanceReward",
+                            "width": 200,
+                            "weight": 0
+                        },
+                        "Clear Water Height | Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Clear Water Height",
+                            "weight": 1,
+                            "softLimit": 3.3,
+                            "hardLimit": 3,
+                            "power": 2
+                        },
+                        "Bed Pressure | Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Bed Pressure",
+                            "weight": 1,
+                            "softLimit": 127,
+                            "hardLimit": 129,
+                            "power": 2
+                        },
+                        "Underflow Percent Solids | Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Underflow Percent Solids",
+                            "weight": 1,
+                            "softLimit": 70,
+                            "hardLimit": 71,
+                            "power": 2
+                        },
+                        "Rake Torque | Power Max Constraint": {
+                            "function": "PowerConstraint",
+                            "field": "Rake Torque",
+                            "weight": 1,
+                            "softLimit": 33,
+                            "hardLimit": 35,
+                            "power": 2
+                        }
+                    },
+                    "limits": {
+                        "Flocculant Dilution Flow Rate": {
+                            "max": 120,
+                            "min": 20,
+                            "points": 0,
+                            "change": 3
+                        },
+                        "Underflow Flow Rate": {
+                            "max": 1750,
+                            "min": 600,
+                            "points": 7,
+                            "change": 20
+                        },
+                        "Flocculant Dose": {
+                            "max": 20,
+                            "min": 8,
+                            "points": 7,
+                            "change": 0.5
+                        },
+                        "Flocculant Flow Rate": {
+                            "max": 12,
+                            "min": 2,
+                            "points": 0,
+                            "change": 0.3
+                        }
+                    }
+                }
+            }
+        },
+        "err": null
+    }
+}

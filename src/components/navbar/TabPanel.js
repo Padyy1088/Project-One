@@ -3,12 +3,7 @@ import './App.css';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-interface TabPanelProps {
-    children?: React.ReactNode;
-    index: number;
-    value: number;
-  }
-export function TabPanel(props: TabPanelProps) {
+export function TabPanel(props) {
     const { children, value, index, ...other } = props;
     return (
       <div

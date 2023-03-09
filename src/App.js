@@ -1,19 +1,26 @@
-import { BasicTabs } from "./components/navbar/navbar";
-import { Box, maxWidth } from "@mui/system";
 import './App.css';
+import Login from "./components/loginpage/loginpage";
 
+// function App() {
+//   return (  
+//     <div className="canvas">
+//       <br /><h1 className="title" style={{color: "grey"}}><b>TK1 Status</b></h1><br /><br /><br />
+      
+//       <BasicTabs/>
+
+//       <br />
+//       <br />
+//     </div>
+//   );
+
+// }
 
 function App() {
   return (  
-    <div className="canvas">
-      <br /><h1 className="header" style={{color: "grey"}}><b>TK1 Status</b></h1>
-      <br /><BasicTabs/>
-      <br />
-      <br /><h2 className="about">Created and programmed by Paddy at Intellisense.io.<br />Designed by Dima on Figma.</h2>
-      <br />
-      <br />
-    </div>
+    <Login />
   );
+
 }
+
 
 export default App;

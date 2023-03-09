@@ -10,7 +10,6 @@ import {
     YAxis,
     CartesianGrid
 } from 'recharts';
-import { Container } from '@mui/material';
   
 const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
 
@@ -30,13 +29,13 @@ function UnderflowGraph() {
 
     
     const pdata =[
-        {place:46,time: "0min", Underflow: Underflow[0]},
-        {place:46,time: "5min", Underflow: Underflow[1]},
-        {place:46,time: "15min", Underflow: Underflow[2]},
-        {place:46,time: "25min", Underflow: Underflow[3]},
-        {place:46,time: "35min", Underflow: Underflow[4]},
-        {place:46,time: "45min", Underflow: Underflow[5]},
-        {place:47,time: "55min", Underflow: Underflow[6]}]
+        {time: "0 mins ago", Underflow: Underflow[0]},
+        {time: "5 mins ago", Underflow: Underflow[1]},
+        {time: "15 mins ago", Underflow: Underflow[2]},
+        {time: "25 mins ago", Underflow: Underflow[3]},
+        {time: "35 mins ago", Underflow: Underflow[4]},
+        {time: "45 mins ago", Underflow: Underflow[5]},
+        {time: "55 mins ago", Underflow: Underflow[6]}]
             
     
     return (

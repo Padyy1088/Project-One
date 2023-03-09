@@ -1,0 +1,23 @@
+.canvas {
+    margin: 0;
+    background-color: #3A3B3B;
+    width: auto;
+    
+  }
+
+  .entry {
+    text-align: center;
+    border: 1px solid #444545;
+    background-color: #444545;
+    border-radius: 30px;
+    margin-left: 400px;
+    margin-right: 400px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+.box {
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+}

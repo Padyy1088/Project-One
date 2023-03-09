@@ -10,7 +10,6 @@ import {
     YAxis,
     CartesianGrid
 } from 'recharts';
-import { Container } from '@mui/material';
   
 const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
 
@@ -31,13 +30,13 @@ function BedPressureGraph() {
 
     
     const pdata =[
-        {place:0,time: "0min", BedPressure: BedPressure[0]},
-        {place:0,time: "5min", BedPressure: BedPressure[1]},
-        {place:0,time: "15min", BedPressure: BedPressure[2]},
-        {place:0,time: "25min", BedPressure: BedPressure[3]},
-        {place:0,time: "35min", BedPressure: BedPressure[4]},
-        {place:0,time: "45min", BedPressure: BedPressure[5]},
-        {place:48,time: "55min", BedPressure: BedPressure[6]}];
+        {time: "0 mins ago", BedPressure: BedPressure[0]},
+        {time: "5 mins ago", BedPressure: BedPressure[1]},
+        {time: "15 mins ago", BedPressure: BedPressure[2]},
+        {time: "25 mins ago", BedPressure: BedPressure[3]},
+        {time: "35 mins ago", BedPressure: BedPressure[4]},
+        {time: "45 mins ago", BedPressure: BedPressure[5]},
+        {time: "55 mins ago", BedPressure: BedPressure[6]}];
             
     
     return (

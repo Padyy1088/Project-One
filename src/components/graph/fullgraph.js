@@ -11,7 +11,6 @@ import {
     YAxis,
     CartesianGrid
 } from 'recharts';
-import { Container } from '@mui/material';
   
 const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
 
@@ -84,13 +83,13 @@ function Graph() {
 
     
     const pdata =[
-        {place:0,time: "0min", Underflow: Underflow[0], BedPressure: BedPressure[0], FlocculantFlow: FlocculantFlow[0], UnderflowFlow: UnderflowFlow[0], FeedFlow: FeedFlow[0], FeedPercent: FeedPercent[0]},
-        {place:0,time: "5min", Underflow: Underflow[1], BedPressure: BedPressure[1], FlocculantFlow: FlocculantFlow[1], UnderflowFlow: UnderflowFlow[1], FeedFlow: FeedFlow[1], FeedPercent: FeedPercent[1]},
-        {place:0,time: "15min", Underflow: Underflow[2], BedPressure: BedPressure[2], FlocculantFlow: FlocculantFlow[2], UnderflowFlow: UnderflowFlow[2], FeedFlow: FeedFlow[2], FeedPercent: FeedPercent[2]},
-        {place:0,time: "25min", Underflow: Underflow[3], BedPressure: BedPressure[3], FlocculantFlow: FlocculantFlow[3], UnderflowFlow: UnderflowFlow[3], FeedFlow: FeedFlow[3], FeedPercent: FeedPercent[3]},
-        {place:0,time: "35min", Underflow: Underflow[4], BedPressure: BedPressure[4], FlocculantFlow: FlocculantFlow[4], UnderflowFlow: UnderflowFlow[4], FeedFlow: FeedFlow[4], FeedPercent: FeedPercent[4]},
-        {place:0,time: "45min", Underflow: Underflow[5], BedPressure: BedPressure[5], FlocculantFlow: FlocculantFlow[5], UnderflowFlow: UnderflowFlow[5], FeedFlow: FeedFlow[5], FeedPercent: FeedPercent[5]},
-        {place:48,time: "55min", Underflow: Underflow[6], BedPressure: BedPressure[6], FlocculantFlow: FlocculantFlow[6], UnderflowFlow: UnderflowFlow[6], FeedFlow: FeedFlow[6], FeedPercent: FeedPercent[6]}];
+        {time: "0 mins ago", Underflow: Underflow[0], BedPressure: BedPressure[0], FlocculantFlow: FlocculantFlow[0], UnderflowFlow: UnderflowFlow[0], FeedFlow: FeedFlow[0], FeedPercent: FeedPercent[0]},
+        {time: "5 mins ago", Underflow: Underflow[1], BedPressure: BedPressure[1], FlocculantFlow: FlocculantFlow[1], UnderflowFlow: UnderflowFlow[1], FeedFlow: FeedFlow[1], FeedPercent: FeedPercent[1]},
+        {time: "15 mins ago", Underflow: Underflow[2], BedPressure: BedPressure[2], FlocculantFlow: FlocculantFlow[2], UnderflowFlow: UnderflowFlow[2], FeedFlow: FeedFlow[2], FeedPercent: FeedPercent[2]},
+        {time: "25 mins ago", Underflow: Underflow[3], BedPressure: BedPressure[3], FlocculantFlow: FlocculantFlow[3], UnderflowFlow: UnderflowFlow[3], FeedFlow: FeedFlow[3], FeedPercent: FeedPercent[3]},
+        {time: "35 mins ago", Underflow: Underflow[4], BedPressure: BedPressure[4], FlocculantFlow: FlocculantFlow[4], UnderflowFlow: UnderflowFlow[4], FeedFlow: FeedFlow[4], FeedPercent: FeedPercent[4]},
+        {time: "45 mins ago", Underflow: Underflow[5], BedPressure: BedPressure[5], FlocculantFlow: FlocculantFlow[5], UnderflowFlow: UnderflowFlow[5], FeedFlow: FeedFlow[5], FeedPercent: FeedPercent[5]},
+        {time: "55 mins ago", Underflow: Underflow[6], BedPressure: BedPressure[6], FlocculantFlow: FlocculantFlow[6], UnderflowFlow: UnderflowFlow[6], FeedFlow: FeedFlow[6], FeedPercent: FeedPercent[6]}];
             
     
     return (

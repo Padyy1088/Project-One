@@ -1,13 +1,20 @@
 .rowC{
     padding-top: 0px;
     display:flex; 
-    flex-direction:row; 
-    background-color: '#3A3B3B';
+    flex-direction:row;
     background:#3A3B3B;
     
   }
 
 .label{
     padding-left: 0px;
-    font-size: 20px;
+    font-size: 20px;border: 1px solid grey;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.table{
+  border-radius: 47px;
+  border-color: grey;
+  background-color: #212121;
 }
