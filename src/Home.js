@@ -28,11 +28,13 @@ function App() {
   //     </div>
   //   </BrowserRouter>
   // );
-  return ( 
-    <div>
-        <Route exact path="/" component={Login} />
-        <Home />
-      </div>
+  return (  
+        <div className="canvas">
+          <h1 className="title" style={{color: "white"}}><b>TK1 Status</b></h1><br /><br /><br /><br />
+          <BasicTabs/>
+          <br />
+          <br />
+        </div>
       );
 
 }

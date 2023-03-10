@@ -1,8 +1,11 @@
 .canvas {
-  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #3A3B3B;
-  width: auto;
-  
+  flex-grow: 1;
 }
 
 .header {
@@ -17,15 +20,20 @@
   text-align: center;
 }
 
+.body {
+  margin: 0;
+  padding: 0;
+}
+
 .title {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  border: 1px solid grey;
+  border: 1px solid #242525;
   border-radius: 10px;
-  padding: 5px;
-  background-color: #3A3B3B;
+  padding: 0px;
+  width: 448px;
+  background-color: #242525;
   text-align: center;
-  color: #3A3B3B;
 }

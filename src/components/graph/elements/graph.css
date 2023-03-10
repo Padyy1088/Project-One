@@ -3,8 +3,7 @@
     display:flex; 
     max-height: 506px;
     flex-direction:row; 
-    background-color: '#3A3B3B';
-    background:#3A3B3B;
+    background-color: #242525;
   }
 
 .label{
@@ -13,6 +12,9 @@
 }
 
 .tooltip{
-  background-color: #3A3B3B;
+  background-color: #242525;
 }
 
+.box {
+  background-color: #242525;
+}

@@ -30,13 +30,13 @@ export function BasicTabs() {
         <React.Fragment>
           <CssBaseline />
           <Container >
-          <div className="Color">
+          <div>
             <Box sx={{ width: '100%' }}>
               <Box sx={{ borderBottom: 1, borderColor: 'container' }}>
               </Box>
               <Box sx={{ borderBottom: 1, borderColor: 'container' }}>
                 <Tabs className="tabs" textColor="white"value={value} onChange={handleChange} aria-label="basic tabs example">
-                  <Tab label="All" value="/" to="/" component={Link} {...a11yProps(0)} />
+                  <Tab label="All" value="/home" to="/home" component={Link} {...a11yProps(0)} />
                   <Tab label="Underflow" value="/underflow" to="/underflow" component={Link} {...a11yProps(1)} />
                   <Tab label="Bed Pressure" value="/bedpressure" to="/bedpressure" component={Link}{...a11yProps(2)} />
                   <Tab label="Underflow Flow" value="/underflowflow" to="/underflowflow" component={Link}{...a11yProps(3)} />
@@ -49,7 +49,7 @@ export function BasicTabs() {
               <TabPanel>
               <Box sx={{ borderBottom: 0, borderColor: 'container' }}>
               <Switch>
-                <Route path="/" exact>
+                <Route path="/home" exact>
                   <MainUI />
                 </Route>
                 <Route path="/underflow">

@@ -54,7 +54,7 @@ export default function BasicTable() {
 
 
   return (
-    <div>
+    <div className="box">
         <label className="label" style={{color: "grey"}}>
             <b>
                 NOW
@@ -65,11 +65,11 @@ export default function BasicTable() {
             .
         </span>
         <Box>
-        <TableContainer component={Paper}  style={{backgroundColor: '#3A3B3B', width: 'auto', height: 'auto'}}>
+        <TableContainer component={Paper}  style={{backgroundColor: '#242525', width: 'auto', height: 'auto'}}>
         <Table sx={{ minWidth: 525 }} aria-label="simple table">
             <TableHead>
             <TableRow className="TableRowBody0">
-                <TableCell style={{color: 'grey', fontSize: 20}}>
+                <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'red'}}>
                         •
                     </span>
@@ -84,7 +84,7 @@ export default function BasicTable() {
                 </TableCell>
             </TableRow>
             <TableRow className="TableRowBody0">
-                <TableCell style={{color: 'grey', fontSize: 20}}>
+                <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'yellow'}}>
                         •
                     </span>
@@ -99,7 +99,7 @@ export default function BasicTable() {
                 </TableCell>
             </TableRow>
             <TableRow className="TableRowBody0">
-                <TableCell style={{color: 'grey', fontSize: 20}}>
+                <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'purple'}}>
                         •
                     </span>
@@ -114,7 +114,7 @@ export default function BasicTable() {
                 </TableCell>
             </TableRow>
             <TableRow className="TableRowBody0"> 
-                <TableCell style={{color: 'grey', fontSize: 20}}>
+                <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'orange'}}>
                         •
                     </span>
@@ -129,7 +129,7 @@ export default function BasicTable() {
                 </TableCell>
             </TableRow>
             <TableRow className="TableRowBody0">
-                <TableCell style={{color: 'grey', fontSize: 20}}>
+                <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'green'}}>
                         •
                     </span>
@@ -144,7 +144,7 @@ export default function BasicTable() {
                 </TableCell>
             </TableRow>
             <TableRow className="TableRowBody0">
-                <TableCell style={{color: 'grey', fontSize: 20}}>
+                <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'blue'}}>
                         •
                     </span>

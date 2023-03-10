@@ -2,19 +2,24 @@
     padding-top: 0px;
     display:flex; 
     flex-direction:row;
-    background:#3A3B3B;
+    background:#242525;
     
   }
 
 .label{
     padding-left: 0px;
-    font-size: 20px;border: 1px solid grey;
-    border-radius: 10px;
-    padding: 5px;
+    font-size: 20px;border: 1px solid #242525;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+.box {
+  background-color: #242525;
+  border-color: #242525;
+  
 }
 
 .table{
-  border-radius: 47px;
-  border-color: grey;
-  background-color: #212121;
+  
+  background-color: #242525;
 }

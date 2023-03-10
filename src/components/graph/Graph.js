@@ -79,11 +79,11 @@ function Graph() {
             
     
     return (
-            <div>
+            <div className="box">
             <label className="label" style={{color: "grey"}}><b>BEFORE</b></label>
-            <br /><space style={{color: "#3A3B3B"}}>.</space>
-            <Box style={{backgroundColor: '#3A3B3B'}}>
-            <LineChart width={600} height={500} data={pdata} margin={{ top: 10, right: 20, bottom: 130, left:-30}}>
+            <br /><space style={{color: "#242525"}}>.</space>
+            <Box>
+            <LineChart width={600} height={343} data={pdata} margin={{ top: 10, right: 20, bottom: 0, left:-30}}>
             <CartesianGrid strokeDasharray="0.1 1" />
             <XAxis dataKey="time"/>
             <YAxis type="number" domain={[0, 49]}/>

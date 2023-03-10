@@ -1,40 +1,10 @@
-.backing {
-  background-color: '#3A3B3B';
-  background:#3A3B3B;
-  padding-left: 1px;
-}
-.Heading {
-  color:grey
-}
+
 .Panel {
-  color:grey;
-  border-radius: 10px;
-  padding: 5px;
+  color: #ffffff;
+  background-color: #242525;
+  border-radius: 20px;
+  padding-top: 10px;
   
 }
-.rowC{
-  padding-top: 120px;
-  display:flex; 
-  height: 100%;
-  flex-direction:row; 
-  background-color: '#3A3B3B';
-  background:#3A3B3B;
-  padding-left: 100px;
-}
-
-.tabs {
-  border: 1px solid #3A3B3B;
-  background-color: #3A3B3B;
-  border-radius: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
-}
 
 
-.items {
-  border: 1px solid #242525;
-  background-color: #242525;
-  border-radius: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
-}

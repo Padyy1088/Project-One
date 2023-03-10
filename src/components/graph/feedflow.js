@@ -43,9 +43,8 @@ function FeedFlowGraph() {
             <div>
             <label className="label" style={{color: "grey"}}><b>FEED FLOW RATE</b></label>
             <br /><space style={{color: "#3A3B3B"}}>.</space>
-            <Box style={{backgroundColor: '#3A3B3B'}}>
-            <LineChart width={1125} height={500} data={pdata} margin={{ top: 10, right: 20, bottom: 130, left:-30}}>
-            <CartesianGrid strokeDasharray="0.1 1" />
+            <Box>
+            <LineChart width={1125} height={343} data={pdata} margin={{ top: 10, right: 20, bottom: 1, left:-30}}>            <CartesianGrid strokeDasharray="0.1 1" />
             <XAxis dataKey="time"/>
             <YAxis type="FeedFlow"/>
             <Tooltip/>
