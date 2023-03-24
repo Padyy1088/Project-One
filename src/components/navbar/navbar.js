@@ -36,7 +36,7 @@ export function BasicTabs() {
               </Box>
               <Box sx={{ borderBottom: 1, borderColor: 'container' }}>
                 <Tabs className="tabs" textColor="white"value={value} onChange={handleChange} aria-label="basic tabs example">
-                  <Tab label="All" value="/home" to="/home" component={Link} {...a11yProps(0)} />
+                  <Tab label="All" value="/home" to="/" component={Link} {...a11yProps(0)} />
                   <Tab label="Underflow" value="/underflow" to="/underflow" component={Link} {...a11yProps(1)} />
                   <Tab label="Bed Pressure" value="/bedpressure" to="/bedpressure" component={Link}{...a11yProps(2)} />
                   <Tab label="Underflow Flow" value="/underflowflow" to="/underflowflow" component={Link}{...a11yProps(3)} />
@@ -49,7 +49,7 @@ export function BasicTabs() {
               <TabPanel>
               <Box sx={{ borderBottom: 0, borderColor: 'container' }}>
               <Switch>
-                <Route path="/home" exact>
+                <Route path="/" exact>
                   <MainUI />
                 </Route>
                 <Route path="/underflow">

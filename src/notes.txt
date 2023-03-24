@@ -1,0 +1,19 @@
+Components:
+
+All components check if the user is logged in
+When the user is logged in, components will unlock and the login page will no longer show
+User will have the option to log out and sign in again
+User details will be listed in the top right corner using a blank picture profile
+To implement these features, look into Redux and use it to store user info and confirm the login process. Also, consider using local storage to keep track of user login status.
+
+Additional details:
+
+No separate home page needed, simply load the root URL
+Use backend to log in and start a session with a unique cookie (req server)
+When the login button is clicked, store who the user is in local storage
+When the page is loaded, read who the logged-in user is from local storage
+Helpful links:
+
+Local Storage: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+Redux JS: https://redux.js.org/introduction/learning-resources
+Course on Redux: https://egghead.io/courses/fundamentals-of-redux-course-from-dan-abramov-bd5cc867

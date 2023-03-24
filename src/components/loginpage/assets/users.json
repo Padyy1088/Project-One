@@ -1,0 +1,12 @@
+{
+    "users": {
+        "id1":{
+            "email":"crowpaddy@gmail.com",
+            "pass":"1234"
+        },
+        "id2":{
+            "email":"example@gmail.com",
+            "pass":"password"
+        }
+    }
+}
