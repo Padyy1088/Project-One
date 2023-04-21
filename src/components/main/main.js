@@ -11,7 +11,7 @@ function MainUI() {
   return (
     <div className="main">
       <BasicTable /> {/* Renders the BasicTable component. */}
-      <Graph /> {/* Renders the Graph component. */}
+      <Graph />{/* Renders the Graph component. */}
     </div>
   );
 }

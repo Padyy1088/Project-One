@@ -7,7 +7,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
-import './elements/Table.css'
+import './elements/Table.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDatabase } from '@fortawesome/free-solid-svg-icons';
 const url = "https://reference.intellisense.io/thickenernn/v1/referencia"
 
 export default function BasicTable() {
@@ -58,7 +60,7 @@ export default function BasicTable() {
         <label className="label" style={{color: "grey"}}>
             <b>
                 NOW
-            </b>
+            </b>        
         </label>
         <br />
         <span style={{color: "#3A3B3B"}}>
@@ -71,10 +73,10 @@ export default function BasicTable() {
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'red'}}>
-                        •
+                    <FontAwesomeIcon icon={faDatabase} /> {''} 
                     </span>
                     <b>
-                         Underflow Percent Solids
+                        Underflow Percent Solids
                     </b> 
                 </TableCell>
                 <TableCell style={{color: 'white', fontSize: 20}} align="right">
@@ -86,7 +88,7 @@ export default function BasicTable() {
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'yellow'}}>
-                        •
+                    <FontAwesomeIcon icon={faDatabase} /> {''}
                     </span>
                     <b>
                          Bed Pressure
@@ -101,8 +103,8 @@ export default function BasicTable() {
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'purple'}}>
-                        •
-                    </span>
+                    <FontAwesomeIcon icon={faDatabase} /> {''}
+                        </span>
                     <b>
                          Underflow Flow Rate
                     </b>
@@ -116,7 +118,7 @@ export default function BasicTable() {
             <TableRow className="TableRowBody0"> 
                 <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'orange'}}>
-                        •
+                    <FontAwesomeIcon icon={faDatabase} /> {''}
                     </span>
                     <b>
                          Flocculant Flow Rate
@@ -131,7 +133,7 @@ export default function BasicTable() {
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'green'}}>
-                        •
+                    <FontAwesomeIcon icon={faDatabase} /> {''}
                     </span>
                     <b>
                          Feed Flow Rate
@@ -146,7 +148,7 @@ export default function BasicTable() {
             <TableRow className="TableRowBody0">
                 <TableCell style={{color: 'white', fontSize: 20}}>
                     <span style={{color: 'blue'}}>
-                        •
+                    <FontAwesomeIcon icon={faDatabase} /> {''}
                     </span>
                     <b>
                          Feed Percent Solids
