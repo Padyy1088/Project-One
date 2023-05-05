@@ -1,5 +1,4 @@
-import {useState, useEffect }from 'react';
-import axios from 'axios'
+
 import Table from '@mui/material/Table';
 import { Box } from '@mui/system';
 import TableCell from '@mui/material/TableCell';
@@ -10,50 +9,8 @@ import Paper from '@mui/material/Paper';
 import './elements/Table.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDatabase } from '@fortawesome/free-solid-svg-icons';
-const url = "https://reference.intellisense.io/thickenernn/v1/referencia"
 
-export default function BasicTable() {
-
-    const[Underflow,setUnderflow] = useState([])
-    const getUnderflow = async () => {
-    const {data} =  await axios.get(url)
-    setUnderflow(data.current.data.TK1.TK1_Underflow_Percent_Solids.values[0])
-    }
-    const[BedPressure,setBedPressure] = useState([])
-    const getBedPressure = async () => {
-    const {data} =  await axios.get(url)
-    setBedPressure(data.current.data.TK1.TK1_Bed_Pressure.values[0])
-    } 
-    const[FlocculantFlow,setFlocculantFlow] = useState([])
-    const getFlocculantFlow = async () => {
-    const {data} =  await axios.get(url)
-    setFlocculantFlow(data.current.data.TK1.TK1_Flocculant_Flow_Rate.values[0])
-    }      
-    const[UnderflowFlow,setUnderflowFlow] = useState([])
-    const getUnderflowFlow = async () => {
-    const {data} =  await axios.get(url)
-    setUnderflowFlow(data.current.data.TK1.TK1_Underflow_Flow_Rate.values[0])
-    }        
-    const[FeedFlow,setFeedFlow] = useState([])
-    const getFeedFlow = async () => {
-    const {data} =  await axios.get(url)
-    setFeedFlow(data.current.data.TK1.TK1_Feed_Flow_Rate.values[0])
-    }        
-    const[FeedPercent,setFeedPercent] = useState([])
-    const getFeedPercent = async () => {
-    const {data} =  await axios.get(url)
-    setFeedPercent(data.current.data.TK1.TK1_Feed_Percent_Solids.values[0])
-    }  
-    
-    useEffect(() => {
-        getFeedFlow();
-        getFeedPercent();
-        getUnderflowFlow();
-        getFlocculantFlow();
-        getBedPressure();
-        getUnderflow();
-        }, []);        
-
+export default function BasicTable({underflow,bedpressure,underflowflow,flocculantflow,feedflow,feedpercent}) {
 
   return (
     <div className="box">
@@ -81,7 +38,7 @@ export default function BasicTable() {
                 </TableCell>
                 <TableCell style={{color: 'white', fontSize: 20}} align="right">
                     <b>
-                        {Underflow}
+                        {underflow}
                     </b>
                 </TableCell>
             </TableRow>
@@ -96,7 +53,7 @@ export default function BasicTable() {
                 </TableCell>
                 <TableCell style={{color: 'white', fontSize: 20}} align="right">
                     <b>
-                        {BedPressure}
+                        {bedpressure}
                     </b>
                 </TableCell>
             </TableRow>
@@ -111,7 +68,7 @@ export default function BasicTable() {
                 </TableCell>
                 <TableCell style={{color: 'white', fontSize: 20}} align="right">
                     <b>
-                        {UnderflowFlow}
+                        {underflowflow}
                     </b>
                 </TableCell>
             </TableRow>
@@ -126,7 +83,7 @@ export default function BasicTable() {
                 </TableCell>
                 <TableCell style={{color: 'white', fontSize: 20}} align="right">
                     <b>
-                        {FlocculantFlow}
+                        {flocculantflow}
                     </b>
                 </TableCell>
             </TableRow>
@@ -141,7 +98,7 @@ export default function BasicTable() {
                 </TableCell>
                 <TableCell style={{color: 'white', fontSize: 20}} align="right">
                     <b>
-                        {FeedFlow}
+                        {feedflow}
                     </b>
                 </TableCell>
             </TableRow>
@@ -156,7 +113,7 @@ export default function BasicTable() {
                 </TableCell>
                 <TableCell style={{color: 'white', fontSize: 20}} align="right">
                     <b>
-                        {FeedPercent}
+                        {feedpercent}
                     </b>
                 </TableCell>
             </TableRow>

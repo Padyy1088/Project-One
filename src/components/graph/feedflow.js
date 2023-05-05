@@ -1,5 +1,3 @@
-import {useState, useEffect }from 'react';
-import axios from 'axios'
 import './elements/graph.css'
 import { Box } from '@mui/system';
 import {
@@ -10,35 +8,9 @@ import {
     YAxis,
     CartesianGrid
 } from 'recharts';
-  
-const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
 
+function FeedFlowGraph({pdata}) {
 
-function FeedFlowGraph() {
-
-
-    const[FeedFlow,setFeedFlow] = useState([])
-    const getFeedFlow = async () => {
-    const {data} =  await axios.get(url)
-    
-    setFeedFlow(data.current.data.TK1.TK1_Feed_Flow_Rate.values)
-    }        
-     
-    useEffect(() => {
-        getFeedFlow();
-        }, []);         
-
-    
-    const pdata =[
-        {time: "0 mins ago", FeedFlow: FeedFlow[0]},
-        {time: "5 mins ago", FeedFlow: FeedFlow[1]},
-        {time: "15 mins ago",  FeedFlow: FeedFlow[2]},
-        {time: "25 mins ago",  FeedFlow: FeedFlow[3]},
-        {time: "35 mins ago",  FeedFlow: FeedFlow[4]},
-        {time: "45 mins ago", FeedFlow: FeedFlow[5]},
-        {time: "55 mins ago", FeedFlow: FeedFlow[6]}];
-            
-    
     return (
             <div>
             <label className="label" style={{color: "grey"}}><b>FEED FLOW RATE</b></label>

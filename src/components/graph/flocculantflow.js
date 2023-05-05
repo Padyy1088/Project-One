@@ -1,5 +1,3 @@
-import {useState, useEffect }from 'react';
-import axios from 'axios'
 import './elements/graph.css'
 import { Box } from '@mui/system';
 import {
@@ -10,35 +8,9 @@ import {
     YAxis,
     CartesianGrid
 } from 'recharts';
-  
-const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
 
+function FlocculantFlowGraph({pdata}) {
 
-function FlocculantFlowGraph() {
-
-
-    const[FlocculantFlow,setFlocculantFlow] = useState([])
-    const getFlocculantFlow = async () => {
-        const {data} =  await axios.get(url)
-       
-        setFlocculantFlow(data.current.data.TK1.TK1_Flocculant_Flow_Rate.values)
-        }      
-          
-    useEffect(() => {
-        getFlocculantFlow();
-        }, []);         
-
-    
-    const pdata =[
-        {time: "0 mins ago",  FlocculantFlow: FlocculantFlow[0]},
-        {time: "5 mins ago",  FlocculantFlow: FlocculantFlow[1]},
-        {time: "15 mins ago",  FlocculantFlow: FlocculantFlow[2]},
-        {time: "25 mins ago",  FlocculantFlow: FlocculantFlow[3]},
-        {time: "35 mins ago",  FlocculantFlow: FlocculantFlow[4]},
-        {time: "45 mins ago",  FlocculantFlow: FlocculantFlow[5]},
-        {time: "55 mins ago", FlocculantFlow: FlocculantFlow[6]}];
-            
-    
     return (
             <div>
             <label className="label" style={{color: "grey"}}><b>FLOCCULANT FLOW RATE</b></label>

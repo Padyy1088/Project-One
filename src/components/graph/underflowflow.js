@@ -1,5 +1,4 @@
-import {useState, useEffect }from 'react';
-import axios from 'axios'
+
 import './elements/graph.css'
 import { Box } from '@mui/system';
 import {
@@ -11,33 +10,8 @@ import {
     CartesianGrid
 } from 'recharts';
   
-const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
+function UnderflowFlowGraph({pdata}) {
 
-
-function UnderflowFlowGraph() {
-
-    const[UnderflowFlow,setUnderflowFlow] = useState([])
-    const getUnderflowFlow = async () => {
-    const {data} =  await axios.get(url)
-    
-    setUnderflowFlow(data.current.data.TK1.TK1_Underflow_Flow_Rate.values)
-    }        
-
-    useEffect(() => {
-        getUnderflowFlow();
-        }, []);         
-
-    
-    const pdata =[
-        {time: "0 mins ago",  UnderflowFlow: UnderflowFlow[0]},
-        {time: "5 mins ago",  UnderflowFlow: UnderflowFlow[1]},
-        {time: "15 mins ago",  UnderflowFlow: UnderflowFlow[2]},
-        {time: "25 mins ago",  UnderflowFlow: UnderflowFlow[3]},
-        {time: "35 mins ago",  UnderflowFlow: UnderflowFlow[4]},
-        {time: "45 mins ago", UnderflowFlow: UnderflowFlow[5]},
-        {time: "55 mins ago", UnderflowFlow: UnderflowFlow[6]}];
-            
-    
     return (
             <div>
             <label className="label" style={{color: "white"}}><b>UNDERFLOW FLOW RATE</b></label>
