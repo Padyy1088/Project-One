@@ -16,14 +16,17 @@ import FeedFlowGraph from '../graph/feedflow';
 import FeedPercentGraph from '../graph/feedpercent';
 import { CssBaseline } from '@mui/material';
 import MainUI from '../main/main';
-import Login from '../loginpage/loginpage';
+import { ErrorMSG } from '../errordisplay/error';
 
 export function BasicTabs() {
+
+
     const [value, setValue] = React.useState(0);
   
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
+
   
     return (
       <div className="Panel">
@@ -51,6 +54,7 @@ export function BasicTabs() {
               <Switch>
                 <Route path="/" exact>
                   <MainUI />
+                  {/* <ErrorMSG/> */}
                 </Route>
                 <Route path="/underflow">
                   <UnderflowGraph/>

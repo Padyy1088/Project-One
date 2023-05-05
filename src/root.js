@@ -1,7 +1,10 @@
+import axios from "axios";
 import Login from "./components/loginpage/loginpage";
 import App from "./Home";
 import { useState } from "react";
 import { useEffect } from "react";
+
+const url ="https://reference.intellisense.io/thickenernn/v1/referencia"
 
 export default function Root() {
     const [email, setEmail] = useState(null);
@@ -16,6 +19,7 @@ export default function Root() {
             <App email={email}/>
         )
         }
+
         else{
             return (
                 <Login onLogin={() => {
@@ -26,4 +30,4 @@ export default function Root() {
                   }} />
             )
             }
-}
+        }

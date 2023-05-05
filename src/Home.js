@@ -32,4 +32,5 @@ function App({email}) {
         </div>
       );
 }
+
 export default App;
