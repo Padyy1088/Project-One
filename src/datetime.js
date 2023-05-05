@@ -2,7 +2,6 @@ import  React, { useState , useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faWifi} from '@fortawesome/free-solid-svg-icons';
 import './App.css'
-import { CheckStatus } from './status';
 
 export const DateTime = () => {
 
@@ -21,11 +20,9 @@ export const DateTime = () => {
 
     return(
         <div className="clock">
-            <button onClick={CheckStatus}>Test 123</button>
             <p><FontAwesomeIcon icon={faWifi} fade/> Connected</p>
             <p>: {date.toLocaleTimeString()} |</p>
-            <p>| {date.toLocaleDateString()} <FontAwesomeIcon icon={faCalendar} /></p>
-            
+            <p>| {date.toLocaleDateString()} <FontAwesomeIcon icon={faCalendar} /></p>  
         </div>
     )
 }
